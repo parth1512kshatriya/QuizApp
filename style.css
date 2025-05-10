@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #FFF3F4;
+    padding: 1rem;
+}
+
+.quiz-container {
+    background: #fff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-container h1 {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.quiz-container h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 45%;
+    background: linear-gradient(135deg, hsla(333, 100%, 53%, 1) 0%, hsla(16, 93%, 57%, 1) 100%, hsla(358, 72%, 56%, 1) 100%);
+}
+
+.quiz-container h2 {
+    margin-bottom: 1rem;
+}
+
+.quiz-container p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.start {
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, hsla(333, 100%, 53%, 1) 0%, hsla(16, 93%, 57%, 1) 100%, hsla(358, 72%, 56%, 1) 100%);
+    cursor: pointer;
+    font-weight: 600;
+    align-items: center;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.options button {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.ques {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.quiztstart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.exitBtn {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, hsla(333, 100%, 53%, 1) 0%, hsla(16, 93%, 57%, 1) 100%, hsla(358, 72%, 56%, 1) 100%);
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.exitBtn i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.restartBtn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, hsla(333, 100%, 53%, 1) 0%, hsla(16, 93%, 57%, 1) 100%, hsla(358, 72%, 56%, 1) 100%);
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .quiz-container {
+        padding: 1.5rem;
+    }
+
+    .quiz-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .ques {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quiz-container {
+        padding: 1rem;
+    }
+
+    .quiz-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .ques {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quiz-container {
+        padding: 2.5rem 1.3rem;
+    }
+
+    .quiz-container h1 {
+        font-size: 1.7rem;
+    }
+
+    .quiz-container h1::after{
+        width: 60%;
+    }
+
+    .quiz-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .ques {
+        font-size: 1.5rem;
+    }
+
+    .start {
+        width: 90%;
+    }
+}
